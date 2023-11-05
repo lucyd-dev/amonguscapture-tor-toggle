@@ -1,3 +1,10 @@
+> [!IMPORTANT]
+> This is just a fork from the original AutoMuteUs. I modified the files to make it compatible with the "The other Roles" Mod.
+
+<br />
+<br />
+<br />
+
 <a href="https://automute.us">
 <img alt="Banner" src="https://media.discordapp.net/attachments/759195945044017234/798382462157193246/banner.png?width=1440&height=274">
 </a>

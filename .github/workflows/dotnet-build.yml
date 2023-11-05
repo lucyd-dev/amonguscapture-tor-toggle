@@ -33,14 +33,14 @@ jobs:
 
       - name: Relocate
         run: |
-          mv AUCapture-WPF\\bin\\Release\\netcoreapp3.1\\publish\\AUCapture-WPF.exe ..\AmongUsCapture-Beta.exe
+          mv AUCapture-WPF\\bin\\Release\\netcoreapp3.1\\publish\\AUCapture-WPF.exe ..\AmongUsCapture-TorMod-Beta.exe
 
       - name: Zip
         run: |
-          7z a AmongUsCapture-Beta.zip ..\AmongUsCapture-Beta.exe -mx=9
+          7z a AmongUsCapture-TorMod-Beta.zip ..\AmongUsCapture-TorMod-Beta.exe -mx=9
       
-      - name: AmongUsCapture-beta
+      - name: AmongUsCapture-TorMod-beta
         uses: actions/upload-artifact@v2
         with:
-          name: AmongUsCapture-beta
-          path: AmongUsCapture-Beta.zip
+          name: AmongUsCapture-TorMod-beta
+          path: AmongUsCapture-TorMod-Beta.zip

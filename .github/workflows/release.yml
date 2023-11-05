@@ -36,11 +36,11 @@ jobs:
 
       - name: Relocate
         run: |
-          mv AUCapture-WPF\\bin\\Release\\netcoreapp3.1\\publish\\AUCapture-WPF.exe ..\AmongUsCapture.exe
+          mv AUCapture-WPF\\bin\\Release\\netcoreapp3.1\\publish\\AUCapture-WPF.exe ..\AmongUsCapture-TorMod.exe
 
       - name: Zip
         run: |
-          7z a ..\AmongUsCapture.zip ..\AmongUsCapture.exe -mx=9
+          7z a ..\AmongUsCapture-TorMod.zip ..\AmongUsCapture-TorMod.exe -mx=9
 
     #   - name: Sign
     #     uses: carbonneuron/GHActionSignHash@v4
@@ -76,8 +76,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
-          asset_path: ..\AmongUsCapture.zip
-          asset_name: AmongUsCapture.zip
+          asset_path: ..\AmongUsCapture-TorMod.zip
+          asset_name: AmongUsCapture-TorMod.zip
           asset_content_type: application/zip
 
     #   - name: Upload capture zip signature
