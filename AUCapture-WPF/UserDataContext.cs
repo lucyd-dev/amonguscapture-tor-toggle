@@ -389,9 +389,9 @@ namespace AUCapture_WPF
                     latest = client.Repository.Release.GetLatest("automuteus", "amonguscapture").Result;
                 }
                 
-                LatestReleaseAssetURL = latest.Assets.First(x => x.Name == "AmongUsCapture.zip").BrowserDownloadUrl;
-                if (latest.Assets.Any(x => x.Name == "AmongUsCapture.zip.sha256.pgp"))
-                    LatestReleaseAssetSignedHashURL = latest.Assets.First(x => x.Name == "AmongUsCapture.zip.sha256.pgp").BrowserDownloadUrl;
+                LatestReleaseAssetURL = latest.Assets.First(x => x.Name == "AmongUsCapture-TorMod.zip").BrowserDownloadUrl;
+                // if (latest.Assets.Any(x => x.Name == "AmongUsCapture.zip.sha256.pgp"))
+                //     LatestReleaseAssetSignedHashURL = latest.Assets.First(x => x.Name == "AmongUsCapture.zip.sha256.pgp").BrowserDownloadUrl;
 
                 LatestVersion = $"{latest.TagName}";
             }
