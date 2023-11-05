@@ -15,7 +15,7 @@ namespace AUCapture_WPF
         string language { get; set; }
 
 		[Option(DefaultValue = false)]
-        bool NoEndJudgmentByExile { get; set; }
+        bool TorModded { get; set; }
 
         [Option(DefaultValue = true)]
         bool startupMemes { get; set; }

@@ -410,7 +410,7 @@ namespace AUCapture_WPF
 
         private void SettingsOnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-			if (e.PropertyName == nameof(Settings.NoEndJudgmentByExile)) {
+			if (e.PropertyName == nameof(Settings.TorModded)) {
 				AmongUsCapture.Settings.PersistentSettings.torModded = Settings.TorModded;
 			}
 
