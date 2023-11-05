@@ -328,7 +328,7 @@ namespace AmongUsCapture {
                             impostorCount = GetPlayers(ProcessMemory.getInstance()).Count(x => x.GetIsImposter() && x.PlayerName != "" && x.PlayerId != exiledPlayer.PlayerId && !x.GetIsDead() && !x.GetIsDisconnected());
                             innocentCount = GetPlayers(ProcessMemory.getInstance()).Count(x => !x.GetIsImposter() && x.PlayerName != "" && x.PlayerId != exiledPlayer.PlayerId && !x.GetIsDead() && !x.GetIsDisconnected());
 
-                            if (impostorCount == 0 || impostorCount >= innocentCount) {
+                            if (!Settings.PersistentSettings.TorModded && impostorCount == 0 || impostorCount >= innocentCount) {
                                 exileCausesEnd = true;
                                 state = GameState.LOBBY;
                             }
@@ -502,7 +502,34 @@ namespace AmongUsCapture {
         Banana = 14,
         Gray = 15,
         Tan = 16,
-        Coral = 17
+        Coral = 17,
+
+		//TheOtherRoles/Modules/CustomColors.cs
+		Tamarind = 18,
+		Army = 19,
+		Olive = 20,
+		Turquoise = 21,
+		Mint = 22,
+		Lavender = 23,
+		Nougat = 24,
+		Peach = 25,
+		Wasabi = 26,
+		HotPink = 27,
+		Petrol = 28,
+		Lemon = 29,
+		SignalOrange = 30,
+		Teal = 31,
+		Blurple = 32,
+		Sunrise = 33,
+		Ice = 34,
+		Fuchsia = 35,
+		RoyalGreen = 36,
+		Slime = 37,
+		Navy = 38,
+		Darkness = 39,
+		Ocean = 40,
+		Sundown = 41
+
     }
 
     public enum PlayRegion {
