@@ -208,6 +208,11 @@
                                                 IsOn="{Binding Settings.AlwaysCopyGameCode, Mode=TwoWay}"
                                                 OffContent="{l:Static properties:Resources.OffText}"
                                                 OnContent="{l:Static properties:Resources.OnText}" />
+											<mah:ToggleSwitch
+                                                Header="{l:Static properties:Resources.SettingsGeneralTabTorModded}"
+                                                IsOn="{Binding Settings.TorModded, Mode=TwoWay}"
+                                                OffContent="{l:Static properties:Resources.OffText}"
+                                                OnContent="{l:Static properties:Resources.OnText}" />
                                             <mah:ToggleSwitch
                                                 Header="{l:Static properties:Resources.SettingsGeneralTabStartupMemes}"
                                                 IsOn="{Binding Settings.startupMemes, Mode=TwoWay}"

@@ -381,12 +381,12 @@ namespace AUCapture_WPF
                 Release latest = new Release();
                 try
                 {
-                    latest = client.Repository.Release.GetLatest("automuteus", "amonguscapture").Result;
+                    latest = client.Repository.Release.GetLatest("lucyd-dev", "amonguscapture-tor-toggle").Result;
 
                 }
                 catch (Exception e)
                 {
-                    latest = client.Repository.Release.GetLatest("denverquane", "amonguscapture").Result;
+                    latest = client.Repository.Release.GetLatest("automuteus", "amonguscapture").Result;
                 }
                 
                 LatestReleaseAssetURL = latest.Assets.First(x => x.Name == "AmongUsCapture.zip").BrowserDownloadUrl;
@@ -410,6 +410,10 @@ namespace AUCapture_WPF
 
         private void SettingsOnPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
+			if (e.PropertyName == nameof(Settings.NoEndJudgmentByExile)) {
+				AmongUsCapture.Settings.PersistentSettings.torModded = Settings.TorModded;
+			}
+
             if (e.PropertyName == nameof(Settings.debug))
             {
                 AmongUsCapture.Settings.PersistentSettings.debugConsole = Settings.debug;

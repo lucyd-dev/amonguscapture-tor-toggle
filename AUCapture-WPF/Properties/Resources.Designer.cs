@@ -420,6 +420,15 @@ namespace AUCapture_WPF.Properties {
             }
         }
         
+		/// <summary>
+        ///   Looks up a localized string similar to No end judgment by exile.
+        /// </summary>
+        public static string SettingsGeneralTabTorModded {
+            get {
+                return ResourceManager.GetString("SettingsGeneralTabTorModded", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Always on top.
         /// </summary>
